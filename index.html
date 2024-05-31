@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="shortcut icon" href="./images/3208709.png" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="./fontawesome-free-6.5.2-web/css/all.min.css"
+  />
+  
+</head>
+<body>
+    <form autocomplete='off' class='form'>
+        <div class='control'>
+          <h1>Register</h1>
+        </div>
+        <div class='control block-cube block-input'>
+          <input oninput="validateUser('userName')" id="userName" name='name' placeholder='Name' type='text'>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <div class='control block-cube block-input'>
+          <input oninput="validateUser('email')" id="email" name='email' placeholder='Email' type='email'>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <div class='control block-cube block-input'>
+          <input oninput="validateUser('password')" id="password" name='password' placeholder='Password' type='password'>
+          <div class="eye" >
+            <i  id="showPass"  onclick="togglePasswordVisibility('password', 'showPass')" class="fa-regular text-white fa-eye"></i>
+
+          </div>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <div class='control block-cube block-input'>
+          <input oninput="validateUser('confirmPassword')" id="confirmPassword" name='confirmPassword' placeholder='Re-enter Password' type='password'>
+          <div class="eye" >
+            <i id="showRePass" onclick="togglePasswordVisibility('confirmPassword', 'showRePass')" class="fa-regular fa-eye"></i>          </div>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <button class='btn block-cube block-cube-hover' id='registerBtn' type='button'>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='text'>Register</div>
+        </button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/register.js"></script>
+</body>
+</html>

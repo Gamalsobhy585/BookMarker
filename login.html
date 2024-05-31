@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./images/3208709.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+    <form autocomplete='off' class='form'>
+        <div class='control'>
+            <h1>Login</h1>
+        </div>
+        <div class='control block-cube block-input'>
+            <input id="loginEmail" name='email' placeholder='Email' type='email'>
+            <div class='bg-top'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg-right'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg'>
+                <div class='bg-inner'></div>
+            </div>
+        </div>
+        <div class='control block-cube block-input'>
+            <input id="loginPassword" name='password' placeholder='Password' type='password'>
+            <div class="eye">
+                <i id="showLoginPass" onclick="togglePasswordVisibility('loginPassword', 'showLoginPass')" class="fa-regular fa-eye"></i>
+            </div>
+            <div class='bg-top'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg-right'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg'>
+                <div class='bg-inner'></div>
+            </div>
+        </div>
+        <button class='btn block-cube block-cube-hover' id='loginBtn' type='button'>
+            <div class='bg-top'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg-right'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='bg'>
+                <div class='bg-inner'></div>
+            </div>
+            <div class='text'>Login</div>
+        </button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
