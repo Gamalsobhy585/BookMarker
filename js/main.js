@@ -1,9 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    siteContainer = JSON.parse(localStorage.getItem('savedBookMarker')) || [];
+});
+
 var siteUrlInput = document.getElementById('siteUrl');
 var siteNameInput = document.getElementById('siteName');
 let saveBtn = document.getElementById('saveBtn');
 let siteContainer = [];
-
-
 
 saveBtn.addEventListener('click', function(event) {
     event.preventDefault();
@@ -14,7 +16,8 @@ saveBtn.addEventListener('click', function(event) {
             icon: "error",
             title: "Oops...",
             text: "Please enter valid inputs.",
-          });    }
+        });
+    }
 });
 
 siteNameInput.addEventListener('input', function() {
@@ -38,15 +41,11 @@ function addBookMarker() {
     showToast("Bookmark is saved");
 }
 
-
-
 function clearForm() {
     siteNameInput.value = '';
     siteUrlInput.value = '';
     siteUrlInput.classList.remove('is-valid');
-
     siteNameInput.classList.remove('is-valid');
-
 }
 
 function validateSite(element) {
@@ -72,8 +71,6 @@ function validateSite(element) {
     }
 }
 
-
-
 function showToast(message) {
     Toastify({
         text: message,
@@ -86,11 +83,19 @@ function showToast(message) {
         stopOnFocus: true,
     }).showToast();
 }
-siteNameInput.addEventListener('blur',function(){
+
+siteNameInput.addEventListener('blur', function() {
+    validateSite(siteNameInput); // Validate on blur
     this.classList.remove('is-invalid');
-    this.nextElementSibling.classList.add('d-none');
-})
-siteUrlInput.addEventListener('blur',function(){
+    if (this.nextElementSibling) {
+        this.nextElementSibling.classList.add('d-none');
+    }
+});
+
+siteUrlInput.addEventListener('blur', function() {
+    validateSite(siteUrlInput); // Validate on blur
     this.classList.remove('is-invalid');
-    this.nextElementSibling.classList.add('d-none');
-})
+    if (this.nextElementSibling) {
+        this.nextElementSibling.classList.add('d-none');
+    }
+});
