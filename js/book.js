@@ -56,7 +56,12 @@ function deleteBookMarker(index) {
 
 
 
-
+function formatUrl(url) {
+    if (!/^https?:\/\//i.test(url)) {
+        return 'http://' + url;
+    }
+    return url;
+}
 
 
 

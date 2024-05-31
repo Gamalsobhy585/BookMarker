@@ -31,8 +31,7 @@ siteUrlInput.addEventListener('input', function() {
 function addBookMarker() {
     let site = {
         siteName: siteNameInput.value,
-        siteUrl: siteUrlInput.value
-    };
+        siteUrl: formatUrl(siteUrlInput.value)    };
     
     siteContainer.push(site);
     localStorage.setItem('savedBookMarker', JSON.stringify(siteContainer));
@@ -99,3 +98,9 @@ siteUrlInput.addEventListener('blur', function() {
         this.nextElementSibling.classList.add('d-none');
     }
 });
+function formatUrl(url) {
+    if (!/^https?:\/\//i.test(url)) {
+        return 'http://' + url;
+    }
+    return url;
+}
