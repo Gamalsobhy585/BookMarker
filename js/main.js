@@ -52,7 +52,7 @@ function clearForm() {
 function validateSite(element) {
     var regex = {
         siteName: /^[A-Za-z0-9 ]{2,50}$/, 
-        siteUrl:  /^(www\.)?([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,})(\[a-zA-Z0-9#?&=._-])$/,
+        siteUrl: /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,})([a-zA-Z0-9#?&=._-]*)$/,
     };
 
     if (regex[element.id].test(element.value)) {
