@@ -85,7 +85,7 @@ function showToast(message) {
 }
 
 siteNameInput.addEventListener('blur', function() {
-    validateSite(siteNameInput); // Validate on blur
+    validateSite(siteNameInput); 
     this.classList.remove('is-invalid');
     if (this.nextElementSibling) {
         this.nextElementSibling.classList.add('d-none');
@@ -93,7 +93,7 @@ siteNameInput.addEventListener('blur', function() {
 });
 
 siteUrlInput.addEventListener('blur', function() {
-    validateSite(siteUrlInput); // Validate on blur
+    validateSite(siteUrlInput); 
     this.classList.remove('is-invalid');
     if (this.nextElementSibling) {
         this.nextElementSibling.classList.add('d-none');
